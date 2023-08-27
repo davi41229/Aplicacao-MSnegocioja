@@ -3,3 +3,4 @@ environment/
 __pycach__/
 venv/
 env/
+app/__pycach__/

@@ -80,3 +80,9 @@ PyJWT==1.7.1
 - pip install -r requirements.txt
 - source venv/bin/activate
 - 
+
+
+#### ERRO para rodar no servidor render ==>
+`File "/opt/render/project/src/app/controllers/default.py", line 320, in <module>`
+`modelo = pickle.load(open('modelo.pkl', 'rb'))``
+#  TypeError: __randomstate_ctor() takes from 0 to 1 positional arguments but 2 were given``
