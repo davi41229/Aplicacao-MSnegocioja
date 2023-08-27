@@ -311,67 +311,6 @@ def predict_valor():
     return render_template('result_valor.html', prediction=prediction)
 
 
-#------------------------------------------
-
-
-
-
-
-"""
-#### ERRO para rodar no servidor render ==>
-# File "/opt/render/project/src/app/controllers/default.py", line 320, in <module>
-# modelo = pickle.load(open('modelo.pkl', 'rb'))
-#  TypeError: __randomstate_ctor() takes from 0 to 1 positional arguments but 2 were given
-
-
-# INICIO DO CODIGO 
-
-# Carregar o modelo treinado
-modelo = pickle.load(open('modelo.pkl', 'rb'))
-
-# rota inicial classificacao_RNA
-@app.route('/classificacao_RNA')
-def classificacao_RNA():
-    return render_template('classificacao_RNA.html')
-
-
-#------------------------------------------
-
-
-# classificacao_RNA  (rota configurada)
-@app.route('/result_RNA', methods=['POST'])
-def result_RNA():
-    # Obter os valores das variáveis do formulário
-    dinheiro = float(request.form['dinheiro'])
-    tempo = request.form['tempo']
-    convidado = request.form['convidado']
-    gasolina = float(request.form['gasolina'])
-    
-    # Converter as variáveis categóricas para numéricas
-    tempo = 1 if tempo == 'aberto' else 0
-    convidado = 1 if convidado == 'sim' else 0
-    
-    # Preparar os dados de entrada para classificação
-    dados = [[dinheiro, tempo, convidado, gasolina]]
-    
-    # Classificar os dados de entrada com o modelo treinado
-    resultado = modelo.predict(dados)[0]
-    
-    # Definir o resultado como 'Ir à festa' ou 'Não ir à festa'
-    resultado = 'Ir à festa' if resultado == 1 else 'Não ir à festa'
-    
-    return render_template('result_RNA.html', resultado=resultado)
-
-    
-# FIM DO CODIGO 
-
-
-"""
-#### ERRO para rodar no servidor render ==>
-# File "/opt/render/project/src/app/controllers/default.py", line 320, in <module>
-# modelo = pickle.load(open('modelo.pkl', 'rb'))
-#  TypeError: __randomstate_ctor() takes from 0 to 1 positional arguments but 2 were given
-
 
 #------------------------------------------
 
