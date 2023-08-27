@@ -316,6 +316,15 @@ def predict_valor():
 
 
 
+"""
+#### ERRO para rodar no servidor render ==>
+# File "/opt/render/project/src/app/controllers/default.py", line 320, in <module>
+# modelo = pickle.load(open('modelo.pkl', 'rb'))
+#  TypeError: __randomstate_ctor() takes from 0 to 1 positional arguments but 2 were given
+
+
+# INICIO DO CODIGO 
+
 # Carregar o modelo treinado
 modelo = pickle.load(open('modelo.pkl', 'rb'))
 
@@ -352,6 +361,15 @@ def result_RNA():
     
     return render_template('result_RNA.html', resultado=resultado)
 
+    
+# FIM DO CODIGO 
+
+
+"""
+#### ERRO para rodar no servidor render ==>
+# File "/opt/render/project/src/app/controllers/default.py", line 320, in <module>
+# modelo = pickle.load(open('modelo.pkl', 'rb'))
+#  TypeError: __randomstate_ctor() takes from 0 to 1 positional arguments but 2 were given
 
 
 #------------------------------------------
