@@ -285,6 +285,10 @@ def logout(user):
 
 #------------------------------------------
 
+"""
+mais um erro ao rodar no server render: 
+raise BuildError(endpoint, values, method, self)
+Aug 27 05:44:44 AM  werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'classificacao_RNA'. Did you mean 'pagina_predict_valor' instead?
 
 
 
@@ -313,6 +317,10 @@ def predict_valor():
 
 
 #------------------------------------------
+
+final do comentario da tora de previsao de valor
+"""
+
 
 
 
