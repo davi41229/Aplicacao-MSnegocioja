@@ -1,0 +1,5 @@
+.vscode/
+environment/
+__pycach__/
+venv/
+env/

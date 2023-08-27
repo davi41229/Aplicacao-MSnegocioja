@@ -1,0 +1,83 @@
+
+
+/***** codigo register.html*****/
+
+
+body
+{
+    margin-top: 100px;
+}
+.boxlogin
+{
+    background-color: #333;
+    width: 800px;
+    height: 600px;
+    margin: 50px 0px 0px 0px;
+    border-radius: 8px;
+
+
+    gap: 50px;
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 0px auto ;
+}
+.boxlogin h1
+{
+    text-align: start;
+}
+.boxinfo
+{
+   
+    
+    width: 500px;
+    height: 500px;
+    color: #fff;
+    
+   
+}
+
+.boxregister
+{
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 8px;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+}
+
+/***** codigo login_page.html*****/
+
+.loginpage
+{
+    background-color: #333;
+    width: 800px;
+    height: 600px;
+    margin: 50px 0px 0px 0px;
+    border-radius: 8px;
+
+
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 0px auto ;
+}
+.logininfo
+{
+    width: 300px;
+    height: 200px;
+    margin-left: 20px;
+    color: #fff;
+}
+.formlogin
+{
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+}

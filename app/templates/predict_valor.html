@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regressão-Linear | Machine Learn</title>
+   <!-- CSS DO PROJETO  -->
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/predict_valor.css')}}">
+   <!-- Favicon da aplicação -->
+   <link rel="shortcut icon" href="{{ url_for('static', filename='img/letra.jpg')}}" type="image/x-icon">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <h1>Insira os valores:</h1>
+    <div class="campos">
+      <form action="{{ url_for('predict_valor') }}" method="post">
+        <label for="val1">Valor 1:</label>
+        <input type="tel" id="val1" placeholder="0,00" name="val1" min="0" max="10000" step="1" required><br><br>
+        <label for="val2">Valor 2:</label>
+        <input type="tel" id="val2" placeholder="0,00" name="val2" min="0" max="10000" step="1" required><br><br>
+        <label for="val3">Valor 3:</label>
+        <input type="tel" id="val3" placeholder="0,00" name="val3" min="0" max="10000" step="1" required><br><br>
+        <label for="val4">Valor 4:</label>
+        <input type="tel" id="val4" placeholder="0,00" name="val4" min="0" max="10000" step="1" required><br><br>
+        
+        <button class="btn btn-secondary" type="submit">Prever Proximo Valor</button>
+      </form>
+
+    </div>
+  </body>
+</html>

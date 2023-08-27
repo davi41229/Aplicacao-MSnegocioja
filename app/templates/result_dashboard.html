@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #333;
+            
+        }
+        h1{
+            color: white;
+        }
+        .card {
+            width: 550px;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .alert {
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <!-- Favicon da aplicação -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/letra.jpg')}}" type="image/x-icon">
+
+</head>
+
+<body>
+    <h1 class="text-center mb-4">Dashboard-Financeiro</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Receitas</h5>
+                    <img src="{{ url_for('static', filename='img/receitas_pizza.png') }}" class="img-fluid" alt="Receitas">
+                </div>
+                <div class="card-footer">
+                    <div class="alert alert-info">Este gráfico mostra a distribuição das receitas.</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Despesas</h5>
+                    <img src="{{ url_for('static', filename='img/despesas_pizza.png') }}" class="img-fluid" alt="Despesas">
+                </div>
+                <div class="card-footer">
+                    <div class="alert alert-info">Este gráfico mostra a distribuição das despesas.</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lucros</h5>
+                    <img src="{{ url_for('static', filename='img/lucros_pizza.png') }}" class="img-fluid" alt="Lucros">
+                </div>
+                <div class="card-footer">
+                    <div class="alert alert-info">Este gráfico mostra a distribuição dos lucros.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Comparação entre Receitas, Despesas e Lucros</h5>
+                    <img src="{{ url_for('static', filename='img/comparacao_pizza.png') }}" class="img-fluid" alt="Comparação">
+                </div>
+                <div class="card-footer">
+                    <div class="alert alert-info">Este gráfico mostra a comparação percentual entre receitas, despesas e lucros.</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Previsão de Valores</h5>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="{{ url_for('static', filename='img/previsao_receitas.png') }}" class="img-fluid" alt="Previsão Receitas">
+                            <div class="alert alert-info">Previsão de Receitas</div>
+                        </div>
+                        <div class="col-md-12">
+                            <img src="{{ url_for('static', filename='img/previsao_despesas.png') }}" class="img-fluid" alt="Previsão Despesas">
+                            <div class="alert alert-info">Previsão de Despesas</div>
+                        </div>
+                        <div class="col-md-12">
+                            <img src="{{ url_for('static', filename='img/previsao_lucros.png') }}" class="img-fluid" alt="Previsão Lucros">
+                            <div class="alert alert-info">Previsão de Lucros</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lucro Previsto</h5>
+                    <img src="{{ url_for('static', filename='img/lucro_previsto.png') }}" class="img-fluid" alt="Lucro Previsto">
+                </div>
+                <div class="card-footer">
+                    <div class="alert alert-info">Este gráfico mostra o lucro previsto calculado a partir das receitas e despesas.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="footer" style="height: 70px; width: 100%; bottom: 0; position: fixed; background-color: #f8f9fa; border-top: 1px solid #dee2e6;">
+        <a class="btn btn-success" href="/dashboard">Fazer Novo Relatorio</a>
+        <div class="container text-center mt-2">
+            <p>© 2023 Melhore Seu Negocio Já. Todos os Direitos Reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

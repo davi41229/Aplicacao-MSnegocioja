@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta CNPJ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+    </style>
+
+    <!-- CSS DO PROJETO  -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cnpj.css')}}">
+  <!-- Favicon da aplicação -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/letra.jpg')}}" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 sidebar">
+                <h2>Pesquisar cnpj</h2>
+                <form method="GET" action="/cnpj">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="cnpj" placeholder="Digite o CNPJ">
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Pesquisar</button>
+                    <a href="/">Voltar</a>
+                    <hr>
+                    <p>OBS: digite o cnpj sem os sinais: . ou /</p>
+                </form>
+            </div>
+            <!-- Conteúdo principal -->
+            <div class="col-md-9 main-content">
+                <h2>Resultados da pesquisa</h2>
+                {% if data %}
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Chave</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key, value in data.items() %}
+                        <tr>
+                            <td>{{ key }}</td>
+                            <td>{{ value }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% elif error %}
+                <p>{{ error }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
